@@ -186,6 +186,7 @@ useMethods(globalMethods)
 
 local HttpService = game:GetService("HttpService")
 local releaseInfo = HttpService:JSONDecode(game:HttpGetAsync("https://api.github.com/repos/" .. user .. "/Hydroxide/releases"))[1]
+print(releaseInfo)
 
 if readFile and writeFile then
     local hasFolderFunctions = (isFolder and makeFolder) ~= nil
